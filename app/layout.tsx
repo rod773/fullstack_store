@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/assets/styles/globals.css";
+import { APP_NAME } from "@/lib/constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Fullstack Store",
-  description: "A fullstact store width nexjs and shadcn ui",
+  description: `${APP_NAME}`,
 };
 
 export default function RootLayout({
