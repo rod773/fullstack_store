@@ -7,7 +7,7 @@ import { FooterSection } from "@/components/FooterSection";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-background font-sans">
+    <div className="flex min-h-screen flex-col font-sans">
       <Hero />
       <StatsSection />
       <FeaturesSection />

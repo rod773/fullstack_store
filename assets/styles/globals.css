@@ -122,5 +122,104 @@
   }
   body {
     @apply bg-background text-foreground;
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+}
+
+.dark body {
+  background-color: #050816;
+  background-image:
+    radial-gradient(1200px 650px at 12% 18%, rgba(59, 130, 246, 0.42) 0%, rgba(59, 130, 246, 0) 62%),
+    radial-gradient(950px 540px at 88% 22%, rgba(124, 58, 237, 0.42) 0%, rgba(124, 58, 237, 0) 58%),
+    radial-gradient(820px 520px at 52% 112%, rgba(56, 189, 248, 0.22) 0%, rgba(56, 189, 248, 0) 66%),
+    linear-gradient(135deg, #040615 0%, #071737 32%, #21105d 70%, #2c0a4a 100%),
+    repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.06) 0px,
+      rgba(255, 255, 255, 0.02) 2px,
+      rgba(255, 255, 255, 0) 8px,
+      rgba(255, 255, 255, 0) 18px
+    );
+  background-blend-mode: screen, screen, screen, normal, overlay;
+  background-attachment: fixed;
+  background-size: 155% 155%, 150% 150%, 150% 150%, cover, 320px 320px;
+  background-position: 0% 0%, 100% 0%, 50% 100%, center, 0 0;
+  position: relative;
+  isolation: isolate;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dark body {
+    animation: ocean-drift 18s ease-in-out infinite alternate;
+  }
+}
+
+.dark body::before,
+.dark body::after {
+  content: "";
+  position: fixed;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.dark body::before {
+  background:
+    radial-gradient(900px 600px at 20% 35%, rgba(56, 189, 248, 0.20) 0%, rgba(56, 189, 248, 0) 62%),
+    radial-gradient(900px 650px at 80% 30%, rgba(168, 85, 247, 0.18) 0%, rgba(168, 85, 247, 0) 62%),
+    radial-gradient(700px 520px at 55% 80%, rgba(37, 99, 235, 0.14) 0%, rgba(37, 99, 235, 0) 60%);
+  filter: blur(40px);
+  opacity: 0.9;
+  transform: translate3d(0, 0, 0);
+  mix-blend-mode: screen;
+}
+
+.dark body::after {
+  background:
+    radial-gradient(850px 550px at 35% 65%, rgba(59, 130, 246, 0.12) 0%, rgba(59, 130, 246, 0) 65%),
+    radial-gradient(950px 650px at 75% 70%, rgba(124, 58, 237, 0.10) 0%, rgba(124, 58, 237, 0) 66%);
+  filter: blur(55px);
+  opacity: 0.8;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dark body::before {
+    animation: ocean-glow-1 22s ease-in-out infinite alternate;
+  }
+  .dark body::after {
+    animation: ocean-glow-2 28s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes ocean-drift {
+  from {
+    background-position: 0% 0%, 100% 0%, 50% 100%, center, 0 0;
+  }
+  to {
+    background-position: 20% 10%, 80% 5%, 50% 90%, center, 120px 80px;
+  }
+}
+
+@keyframes ocean-glow-1 {
+  from {
+    transform: translate3d(-1.5%, -1%, 0) scale(1);
+    filter: blur(42px) hue-rotate(0deg);
+  }
+  to {
+    transform: translate3d(2%, 1.5%, 0) scale(1.06);
+    filter: blur(46px) hue-rotate(8deg);
+  }
+}
+
+@keyframes ocean-glow-2 {
+  from {
+    transform: translate3d(1%, -1.2%, 0) scale(1);
+    filter: blur(56px) hue-rotate(0deg);
+  }
+  to {
+    transform: translate3d(-2%, 1.8%, 0) scale(1.08);
+    filter: blur(60px) hue-rotate(-10deg);
   }
 }

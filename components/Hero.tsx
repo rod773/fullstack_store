@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b bg-gradient-to-b from-background via-background to-background/80">
+    <section className="relative overflow-hidden border-b bg-linear-to-b from-background/55 via-background/25 to-background/10 backdrop-blur-sm">
       <div className="mx-auto flex min-h-[80vh] max-w-5xl flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
         <span className="mb-4 inline-flex items-center rounded-full border bg-background/60 px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm backdrop-blur">
           New · Fullstack Store
@@ -11,7 +11,7 @@ export function Hero() {
 
         <h1 className="mb-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
           Build your next{" "}
-          <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             commerce experience
           </span>
         </h1>

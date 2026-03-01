@@ -39,7 +39,7 @@ export function StatsSection({ className }: { className?: string }) {
   return (
     <section
       className={cn(
-        "border-t bg-background py-16 sm:py-24",
+        "border-t bg-background/35 py-16 backdrop-blur-sm sm:py-24",
         className
       )}
     >
