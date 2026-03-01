@@ -1,5 +1,6 @@
 // components/hero.tsx
 import { Button } from "@/components/ui/button";
+import { ScrollTitle } from "@/components/ScrollTitle";
 
 export function Hero() {
   return (
@@ -9,12 +10,14 @@ export function Hero() {
           New · Fullstack Store
         </span>
 
-        <h1 className="mb-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-          Build your next{" "}
-          <span className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-            commerce experience
-          </span>
-        </h1>
+        <ScrollTitle>
+          <h1 className="mb-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+            Build your next{" "}
+            <span className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+              commerce experience
+            </span>
+          </h1>
+        </ScrollTitle>
 
         <p className="mb-8 max-w-2xl text-balance text-sm text-muted-foreground sm:text-base">
           A modern fullstack store starter with authentication, dashboard, and a

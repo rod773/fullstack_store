@@ -4,6 +4,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { ScrollTitle } from "@/components/ScrollTitle";
 import { cn } from "@/lib/utils";
 import {
   Shield,
@@ -66,12 +67,14 @@ export function FeaturesSection({ className }: { className?: string }) {
           <span className="mb-3 inline-flex items-center rounded-full border bg-background/60 px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm backdrop-blur">
             Features
           </span>
-          <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-            Everything you need for{" "}
-            <span className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              your store
-            </span>
-          </h2>
+          <ScrollTitle>
+            <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+              Everything you need for{" "}
+              <span className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                your store
+              </span>
+            </h2>
+          </ScrollTitle>
           <p className="mx-auto mt-4 max-w-xl text-balance text-sm text-muted-foreground sm:text-base">
             A fullstack starter with auth, dashboard, and a polished UI—ready to
             customize and ship.

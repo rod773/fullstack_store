@@ -5,6 +5,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ScrollTitle } from "@/components/ScrollTitle";
 import { cn } from "@/lib/utils";
 
 const team = [
@@ -47,12 +48,14 @@ export function TeamSection({ className }: { className?: string }) {
           <span className="mb-3 inline-flex items-center rounded-full border bg-background/60 px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm backdrop-blur">
             Team
           </span>
-          <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-            Meet the people behind{" "}
-            <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Fullstack Store
-            </span>
-          </h2>
+          <ScrollTitle>
+            <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+              Meet the people behind{" "}
+              <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                Fullstack Store
+              </span>
+            </h2>
+          </ScrollTitle>
           <p className="mx-auto mt-4 max-w-xl text-balance text-sm text-muted-foreground sm:text-base">
             A small team building modern commerce tools with great UX and
             developer experience.
